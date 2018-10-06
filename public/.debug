@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionList>
+    <Extension Id="com.javanli.color-doctor">
+        <HostList>
+            <Host Name="PHXS" Port="8000"/>
+            <Host Name="IDSN" Port="8001"/>
+        </HostList>
+    </Extension>
+</ExtensionList>

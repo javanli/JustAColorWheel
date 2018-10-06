@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(83, 83, 83);
+}
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.App {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    p,div {
+        user-select: none;
+    }
+    #display-circle {
+        position: absolute;
+        width: 16%;
+        height: 0;
+        padding-bottom: 16%;
+        border-radius: 50%;
+        left: 10%;
+        margin-top: 10%;
+    }
+    #color-indicator {
+        color: white;
+        position: absolute;
+        right: 10px;
+        margin-top: 90%;
+        user-select: auto;
+        font-family: Consolas;
+    }
+    .color-wheel {
+        width: 75%;
+        height: 0;
+        padding-bottom: 75%;
+        position: relative;
+        margin: 18% auto 5%;
+    }
+    .color-slider {
+        height: 16px;
+        position: relative;
+    }
+    .SliderPanel {
+        width: 100%;
+    }
+}

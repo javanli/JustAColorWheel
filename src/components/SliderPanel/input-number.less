@@ -1,0 +1,99 @@
+@inputNumberPrefixCls: rc-input-number;
+
+.@{inputNumberPrefixCls} {
+  margin: 0;
+  padding: 0;
+  line-height: 16px;
+  font-size: 12px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid #676767;
+  border-radius: 2px;
+
+  &-focused {
+    border-color: #40a9ff;
+    box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+  }
+
+  &-handler {
+    text-align: center;
+    line-height: 8px;
+    height: 8px;
+    overflow: hidden;
+    display:block;
+    touch-action: none;
+  }
+
+  &-handler-up-inner, &-handler-down-inner {
+    color: #666666;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+
+  &-input-wrap {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &-input {
+    width: 100%;
+    text-align: center;
+    outline: 0;
+    -moz-appearance: textfield;
+    line-height: 16px;
+    height: 100%;
+    transition: all 0.3s ease;
+    color: #EAEAEA;
+    border: 0;
+    border-radius: 5px;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  &-handler-wrap {
+    float: right;
+    width: 20px;
+    height: 100%;
+  }
+
+  .arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    
+    border-bottom: 5px solid white;
+    margin: auto;
+  }
+  
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    
+    border-top: 5px solid white;
+    margin: auto;
+  }
+}
+.slider-wrapper {
+    display: flex;
+    line-height: 20px;
+    height: 20px;
+    margin: 6px 10px 3px 4px;
+    color: #898989;
+    .key {
+        line-height: 20px;
+        height: 20px;
+        width: 10px;
+    }
+    .color-slider {
+        display: inline-block;
+        flex: 1;
+        margin-left: 4px;
+        margin-right: 4px;
+        height: 100%;
+    }
+}
