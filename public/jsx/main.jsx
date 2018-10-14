@@ -1,8 +1,3 @@
-var dodo = function (info)
-{
-    app.documents.add();// 新建一个文档
-}
-
 function setForegroundColorRGB(r, g, b) {
     var RGB = new RGBColor();
     RGB.red = r;
@@ -22,5 +17,4 @@ function getForegroundColorRGB() {
              "\", \"g\":\"" + app.foregroundColor.rgb.green +
              "\", \"b\":\"" + app.foregroundColor.rgb.blue + "\"}";
     json = '/*' + json + '*/'; // Wrap the JSON
-    sendEvent("colorImported", json);
 };

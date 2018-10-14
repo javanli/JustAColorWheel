@@ -293,6 +293,7 @@ class ColorPickerWheel extends React.Component {
   }
   onMove = (e) => {
     var { edit } = this.state
+    console.log('onmove',edit)
     if (edit === 'h') {
       this.setHue(e)
     }
@@ -313,7 +314,7 @@ class ColorPickerWheel extends React.Component {
   handleMouseDown = (e) => {
     const { radius, width } = this.props
     let { clientX, clientY } = e
-    const sourceClientOffset = e.target.getBoundingClientRect();
+    const sourceClientOffset = document.getElementsByClassName('color-wheel')[0].getBoundingClientRect();
     const left = sourceClientOffset.left
     const top = sourceClientOffset.top
     const centerX = left + radius
@@ -321,7 +322,6 @@ class ColorPickerWheel extends React.Component {
     const x = clientX - centerX
     const y = clientY - centerY
     const distanceFromCenter = Math.sqrt(x ** 2 + y ** 2)
-    // debugger;
     let edit
     if (distanceFromCenter < radius) {
       edit = distanceFromCenter > radius - width ? 'h' : 'sv'

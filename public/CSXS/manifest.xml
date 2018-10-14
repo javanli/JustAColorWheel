@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.nullice.helloworld" ExtensionBundleVersion="1.0.0" Version="6.0"> <!-- MAJOR-VERSION-UPDATE-MARKER -->
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.javanli.just-a-color-wheel" ExtensionBundleVersion="1.1.0" Version="6.0"> <!-- MAJOR-VERSION-UPDATE-MARKER -->
     <ExtensionList>
-        <Extension Id="com.javanli.just-a-color-wheel" Version="1.0.0"/> <!-- 设置扩展 ID-->
+        <Extension Id="com.javanli.just-a-color-wheel" Version="1.1.0"/> <!-- 设置扩展 ID-->
     </ExtensionList>
 
     <ExecutionEnvironment>
@@ -35,19 +35,19 @@
 
                 <UI>
                     <Type>Panel</Type> <!-- 设置扩展显示为面板模式-->
-                    <Menu>color doctor</Menu> <!-- 设置扩展标题-->
+                    <Menu>JustAColorWheel</Menu> <!-- 设置扩展标题-->
                     <Geometry>
                         <Size>  <!-- 设置扩展面板尺寸-->
-                            <Height>300</Height>
-                            <Width>300</Width>
+                            <Height>475</Height>
+                            <Width>325</Width>
                         </Size>
                         <MaxSize>
-                            <Height>900</Height>
-                            <Width>900</Width>
+                            <Height>950</Height>
+                            <Width>650</Width>
                         </MaxSize>
                         <MinSize>
-                            <Height>300</Height>
-                            <Width>300</Width>
+                            <Height>400</Height>
+                            <Width>250</Width>
                         </MinSize>
                     </Geometry>
                     <Icons>  <!-- 设置扩展面板尺寸-->

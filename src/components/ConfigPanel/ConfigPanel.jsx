@@ -32,7 +32,7 @@ class ConfigPanel extends Component {
             min={0}
             max={359}
             value={configStore.scrollWheel}
-            style={{ width: 60, marginLeft: 20 }}
+            style={{ width: 45, marginLeft: 10 }}
             readOnly={false}
             onChange={(value) => {
               configStore.setScrollWheel(value)
@@ -60,7 +60,7 @@ class ConfigPanel extends Component {
             min={0}
             max={359}
             value={configStore.scrollTriangle}
-            style={{ width: 60, marginLeft: 20 }}
+            style={{ width: 45, marginLeft: 10 }}
             readOnly={false}
             onChange={(value) => {
               configStore.setScrollTriangle(value)

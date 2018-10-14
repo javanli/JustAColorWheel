@@ -246,7 +246,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding-bottom: 10px;
+    margin-bottom: 5px;
   }
   .rc-tabs-tabpane::-webkit-scrollbar {
     width: 4px;

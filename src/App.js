@@ -39,8 +39,39 @@ class App extends Component {
         })
       });
     }
+    if (window.__adobe_cep__) {
+      let cs = new window.CSInterface();
+      var event = new window.CSEvent("com.adobe.PhotoshopRegisterEvent", "APPLICATION");
+      event.extensionId = cs.getExtensionID();
+      event.data = "1936028772"; // setd
+      cs.dispatchEvent(event);
+      cs.addEventListener("com.adobe.PhotoshopJSONCallback" + cs.getExtensionID(), (event) => {
+        event.data = event.data.replace("ver1,{", "{");
+        let data = JSON.parse(event.data);
+        let {blue,grain,red} = data.eventData.to;
+        blue = Math.round(blue);
+        grain = Math.round(grain);
+        red = Math.round(red);
+        if(this.igonreList){
+          let index = this.igonreList.findIndex(({r,g,b}) => {return blue === b && grain === g && red === r})
+          console.log(this.igonreList,data.eventData.to,index)
+          if(index >= 0){
+            this.igonreList.splice(0,index + 1);
+            return;
+          }
+          else{
+            this.igonreList = []
+          }
+        }
+        this.onChange({
+          r:red,
+          g:grain,
+          b:blue
+        },true,true);
+      });
+    }
   }
-  onChange = (color, isSave) => {
+  onChange = (color, isSave, forbidEvent) => {
     let { h, s, v } = color;
     if (h === undefined) {
       let { r, g, b } = color;
@@ -57,7 +88,11 @@ class App extends Component {
         h, s, v
       })
       let { r, g, b } = hsvToRgb(h, s, v);
-      if (window.__adobe_cep__) {
+      if (window.__adobe_cep__ && !forbidEvent) {
+        if(!this.igonreList){
+          this.igonreList = []
+        }
+        this.igonreList.push({r,g,b})
         let cs = new window.CSInterface();
         let script = `setForegroundColorRGB(${r},${g},${b})`;
         cs.evalScript(script);
