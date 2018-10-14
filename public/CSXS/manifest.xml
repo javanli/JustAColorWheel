@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.nullice.helloworld" ExtensionBundleVersion="1.0" Version="6.0"> <!-- MAJOR-VERSION-UPDATE-MARKER -->
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.nullice.helloworld" ExtensionBundleVersion="1.0.0" Version="6.0"> <!-- MAJOR-VERSION-UPDATE-MARKER -->
     <ExtensionList>
-        <Extension Id="com.javanli.color-doctor" Version="1.0"/> <!-- 设置扩展 ID-->
+        <Extension Id="com.javanli.just-a-color-wheel" Version="1.0.0"/> <!-- 设置扩展 ID-->
     </ExtensionList>
 
     <ExecutionEnvironment>
@@ -20,7 +20,7 @@
     </ExecutionEnvironment>
 
     <DispatchInfoList>
-        <Extension Id="com.javanli.color-doctor"> <!-- 为 com.nullice.helloworld 设置属性-->
+        <Extension Id="com.javanli.just-a-color-wheel">
             <DispatchInfo>
                 <Resources>
                     <MainPath>./index.html</MainPath> <!-- 指定起始载入的网页-->

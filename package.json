@@ -9,6 +9,7 @@
     "mobx": "^5.1.0",
     "mobx-react": "^5.2.5",
     "rc-input-number": "^4.1.0",
+    "rc-slider": "^8.6.3",
     "rc-switch": "^1.8.0",
     "rc-tabs": "^9.4.6",
     "react": "^16.4.2",

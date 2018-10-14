@@ -121,6 +121,7 @@
   }
   .rc-tabs-content .rc-tabs-tabpane {
     overflow: auto;
+    overflow-y: scroll;
   }
   .rc-tabs-content-animated {
     transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1), margin-left 0.3s cubic-bezier(0.35, 0, 0.25, 1), margin-top 0.3s cubic-bezier(0.35, 0, 0.25, 1);
@@ -240,9 +241,17 @@
     height: 40px;
   }
   .rc-tabs-tabpane {
-    height: 100px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding-bottom: 10px;
   }
+  .rc-tabs-tabpane::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+  }
+  .rc-tabs-tabpane::-webkit-scrollbar-thumb {
+    background: #cfd2d5;
+}
